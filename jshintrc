@@ -21,7 +21,10 @@
         "goog",
         "require",            // RequireJS
         "requirejs",
-        "define"
+        "define",
+				"module",
+				"describe",
+				"it"
     ],
 
 
