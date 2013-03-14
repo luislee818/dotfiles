@@ -22,9 +22,12 @@
         "require",            // RequireJS
         "requirejs",
         "define",
-				"describe",
+				"describe",  // Jasmine
 				"it",
-				"module"
+				"expect",
+				"beforeEach",
+				"spyOn",
+				"module"  // Node.js
     ],
 
 
