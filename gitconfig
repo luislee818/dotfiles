@@ -1,0 +1,20 @@
+[user]
+	name = Dapeng Li
+	email = luislee818@gmail.com
+[core]
+	excludesfile = /Users/Dapeng/.gitignore_global
+	editor=/usr/bin/vim
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[color]
+	ui = true
+[alias]
+	lga = log --oneline --graph --all --decorate
+	st = status
+	co = checkout
+	br = branch
+	ci = commit
