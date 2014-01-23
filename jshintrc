@@ -18,16 +18,16 @@
     "dojo"          : false,
 
     "predef"        : [  // Extra globals.
-        "goog",
-        "require",            // RequireJS
-        "requirejs",
-        "define",
-				"describe",  // Jasmine
-				"it",
-				"expect",
-				"beforeEach",
-				"spyOn",
-				"module"  // Node.js
+      "goog",
+      "require",   // RequireJS
+      "requirejs",
+      "define",
+      "describe",  // Jasmine
+      "it",
+      "expect",
+      "beforeEach",
+      "spyOn",
+      "module"  // Node.js
     ],
 
 
@@ -75,6 +75,6 @@
     "plusplus"      : false,  // Prohibit use of `++` &amp; `--`.
     "sub"           : true,   // Tolerate all forms of subscript notation besides dot notation e.g. `dict['key']` instead of `dict.key`.
     "trailing"      : true,   // Prohibit trailing whitespaces.
-    "smarttabs"		: true    // Enable smarttabs
+    "smarttabs"     : true    // Enable smarttabs
     // "white"         : true    // Check against strict whitespace and indentation rules.
 }
