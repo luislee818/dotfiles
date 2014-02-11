@@ -14,6 +14,10 @@ export HISTTIMEFORMAT='%b %d %I:%M %p '
 export HISTCONTROL=ignoreboth
 export HISTIGNORE="history:pwd:ls:ls -la:ll"
 
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+        . `brew --prefix`/etc/bash_completion
+fi
+
 export PS1="\W > "
 
 # GREP_COLOR codes
@@ -33,7 +37,7 @@ export GREP_COLOR="34;47"
 # Specify options grep should use by default
 export GREP_OPTIONS="--color=auto"
 
-alias vim='/usr/local/Cellar/vim/7.4.052/bin/vim'
+alias vim='/usr/local/bin/vim'
 
 alias ll='ls -lahG'
 alias home='cd ~'
