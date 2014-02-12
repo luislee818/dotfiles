@@ -332,4 +332,6 @@ fi
 
 ## END OF FILE #################################################################
 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
 export PATH=/usr/local/bin:$PATH
