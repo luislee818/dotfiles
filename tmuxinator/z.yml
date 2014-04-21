@@ -25,9 +25,9 @@ windows:
         - vim:
           - cd zaynar_cms
           - vim
-        - foo:
+        - server:
           - cd zaynar_cms
-          - echo 'rails s -p 3001'
+          - rails s -p 3001
       shell: cd zaynar_cms
   - zaynar:
       layout: c376,272x62,0,0{205x62,0,0,0,66x62,206,0,2}
@@ -35,30 +35,27 @@ windows:
         - vim:
           - cd zaynar
           - vim
-        - foo:
+        - server:
           - cd zaynar
-          - echo 'rails s -p 3001'
+          - rails s
   - asian_sports_book:
       layout: c376,272x62,0,0{205x62,0,0,0,66x62,206,0,2}
       panes:
         - vim:
           - cd asian_sports_book
           - vim
-        - foo:
+        - karma:
           - cd asian_sports_book
+          - rake
   - omds:
       layout: c376,272x62,0,0{205x62,0,0,0,66x62,206,0,2}
       panes:
         - vim:
           - cd omds
           - vim
-        - foo:
-          - cd omds
   - agp-json:
       layout: c376,272x62,0,0{205x62,0,0,0,66x62,206,0,2}
       panes:
         - vim:
           - cd agp-json
           - vim
-        - foo:
-          - cd agp-json
