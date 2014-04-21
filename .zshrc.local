@@ -335,3 +335,10 @@ fi
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 export PATH=/usr/local/bin:$PATH
+export NODE_PATH=/usr/local/lib/node_modules:$NODE_PATH
+
+source ~/workspace/others/tmuxinator/completion/tmuxinator.zsh
+
+alias ctags="`brew --prefix`/bin/ctags"
+alias v="vim +NERDTree"
+alias startpg="pg_ctl -D /usr/local/pgsql/data start"

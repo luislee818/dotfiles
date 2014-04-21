@@ -1,0 +1,64 @@
+# ~/.tmuxinator/z.yml
+
+name: zaynar
+root: ~/workspace
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+windows:
+  - zaynar_cms:
+      layout: c376,272x62,0,0{205x62,0,0,0,66x62,206,0,2}
+      panes:
+        - vim:
+          - cd zaynar_cms
+          - vim
+        - foo:
+          - cd zaynar_cms
+          - echo 'rails s -p 3001'
+      shell: cd zaynar_cms
+  - zaynar:
+      layout: c376,272x62,0,0{205x62,0,0,0,66x62,206,0,2}
+      panes:
+        - vim:
+          - cd zaynar
+          - vim
+        - foo:
+          - cd zaynar
+          - echo 'rails s -p 3001'
+  - asian_sports_book:
+      layout: c376,272x62,0,0{205x62,0,0,0,66x62,206,0,2}
+      panes:
+        - vim:
+          - cd asian_sports_book
+          - vim
+        - foo:
+          - cd asian_sports_book
+  - omds:
+      layout: c376,272x62,0,0{205x62,0,0,0,66x62,206,0,2}
+      panes:
+        - vim:
+          - cd omds
+          - vim
+        - foo:
+          - cd omds
+  - agp-json:
+      layout: c376,272x62,0,0{205x62,0,0,0,66x62,206,0,2}
+      panes:
+        - vim:
+          - cd agp-json
+          - vim
+        - foo:
+          - cd agp-json
