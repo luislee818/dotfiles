@@ -25,9 +25,8 @@ windows:
         - vim:
           - cd zaynar_cms
           - vim
-        - server:
+        - spec:
           - cd zaynar_cms
-          - rails s -p 3001
       shell: cd zaynar_cms
   - zaynar:
       layout: c376,272x62,0,0{205x62,0,0,0,66x62,206,0,2}
@@ -35,9 +34,8 @@ windows:
         - vim:
           - cd zaynar
           - vim
-        - server:
+        - spec:
           - cd zaynar
-          - rails s
   - asian_sports_book:
       layout: c376,272x62,0,0{205x62,0,0,0,66x62,206,0,2}
       panes:
@@ -52,10 +50,28 @@ windows:
       panes:
         - vim:
           - cd omds
-          - vim
   - agp-json:
       layout: c376,272x62,0,0{205x62,0,0,0,66x62,206,0,2}
       panes:
         - vim:
           - cd agp-json
-          - vim
+  - zeus-zaynar:
+      layout: 9132,272x62,0,0{136x62,0,0[136x31,0,0,16,136x30,0,32,18],135x62,137,0,17}
+      panes:
+        - start:
+          - cd zaynar
+          - zeus start
+        - server:
+          - cd zaynar
+          - zeus server
+        - console:
+          - cd zaynar
+  - zeus-zaynar-cms:
+      layout: 9132,272x62,0,0{136x62,0,0[136x31,0,0,16,136x30,0,32,18],135x62,137,0,17}
+      panes:
+        - start:
+          - cd zaynar_cms
+        - server:
+          - cd zaynar_cms
+        - console:
+          - cd zaynar_cms
