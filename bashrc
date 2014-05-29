@@ -2,7 +2,6 @@ echo -n "Uptime: "; uptime
 echo ""
 
 # must use double-quotes when calling a shell variable
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/share/npm/bin:$PATH"
 
 export LESS='-M'
 
@@ -37,7 +36,7 @@ export GREP_COLOR="34;47"
 # Specify options grep should use by default
 export GREP_OPTIONS="--color=auto"
 
-alias vim='/usr/local/bin/vim'
+#alias vim='/usr/local/bin/vim'
 
 alias ll='ls -lahG'
 alias home='cd ~'
@@ -58,16 +57,18 @@ alias pdw='pwd'
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
 # Git tab completion
-source ~/git-completion.bash
+#source ~/git-completion.bash
 
 # Show branch in status line
-PS1='[\W$(__git_ps1 " (%s)")]\$ '
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-PATH=$PATH:~/bin
-PATH=$PATH:~/workspace/doctorjs/bin
+#PS1='[\W$(__git_ps1 " (%s)")]\$ '
+#PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+#PATH=$PATH:~/bin
+#PATH=$PATH:~/workspace/doctorjs/bin
 NODE_PATH=/usr/local/lib/node_modules
 NODE_PATH=$NODE_PATH:/usr/local/lib/jsctags
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#HOME/~}\007"'
-export PATH
+#export PATH
 export NODE_PATH
 export LESS="-erX"
+
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/share/npm/bin:$PATH"

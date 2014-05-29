@@ -60,10 +60,8 @@ windows:
       panes:
         - start:
           - cd zaynar
-          - zeus start
         - server:
           - cd zaynar
-          - zeus server
         - console:
           - cd zaynar
   - zeus-zaynar-cms:
@@ -75,11 +73,8 @@ windows:
           - cd zaynar_cms
         - console:
           - cd zaynar_cms
-  - zaynar_common:
-      layout: c376,272x62,0,0{205x62,0,0,0,66x62,206,0,2}
+  - bundle-config:
       panes:
         - vim:
-          - cd zaynar_common
-          - vim
-        - spec:
-          - cd zaynar_common
+          - cd ~/.bundle
+          - vim config
