@@ -20,3 +20,5 @@
 	ci = commit
 [init]
 	templatedir = ~/.git_template
+[push]
+	default = simple
