@@ -1,0 +1,9 @@
+[submodule "rbenv_plugins/rbenv-binstubs"]
+	path = rbenv_plugins/rbenv-binstubs
+	url = https://github.com/ianheggie/rbenv-binstubs.git
+[submodule "rbenv_plugins/rbenv-gem-rehash"]
+	path = rbenv_plugins/rbenv-gem-rehash
+	url = https://github.com/sstephenson/rbenv-gem-rehash.git
+[submodule "rbenv_plugins/rbenv-ctags"]
+	path = rbenv_plugins/rbenv-ctags
+	url = https://github.com/tpope/rbenv-ctags.git
