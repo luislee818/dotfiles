@@ -1,6 +1,6 @@
 # ~/.tmuxinator/zr.yml
 
-name: zaynar
+name: zaynar release
 root: ~/Release
 
 # Optional tmux socket
