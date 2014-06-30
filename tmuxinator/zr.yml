@@ -1,0 +1,80 @@
+# ~/.tmuxinator/zr.yml
+
+name: zaynar
+root: ~/Release
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+windows:
+  - zaynar_cms:
+      layout: c376,272x62,0,0{205x62,0,0,0,66x62,206,0,2}
+      panes:
+        - vim:
+          - cd zaynar_cms
+          - vim
+        - spec:
+          - cd zaynar_cms
+      shell: cd zaynar_cms
+  - zaynar:
+      layout: c376,272x62,0,0{205x62,0,0,0,66x62,206,0,2}
+      panes:
+        - vim:
+          - cd zaynar
+          - vim
+        - spec:
+          - cd zaynar
+  - asian_sports_book:
+      layout: c376,272x62,0,0{205x62,0,0,0,66x62,206,0,2}
+      panes:
+        - vim:
+          - cd asian_sports_book
+          - vim
+        - karma:
+          - cd asian_sports_book
+          - rake
+  - omds:
+      layout: c376,272x62,0,0{205x62,0,0,0,66x62,206,0,2}
+      panes:
+        - vim:
+          - cd omds
+  - agp-json:
+      layout: c376,272x62,0,0{205x62,0,0,0,66x62,206,0,2}
+      panes:
+        - vim:
+          - cd agp-json
+  - zeus-zaynar:
+      layout: 9132,272x62,0,0{136x62,0,0[136x31,0,0,16,136x30,0,32,18],135x62,137,0,17}
+      panes:
+        - start:
+          - cd zaynar
+        - server:
+          - cd zaynar
+        - console:
+          - cd zaynar
+  - zeus-zaynar-cms:
+      layout: 9132,272x62,0,0{136x62,0,0[136x31,0,0,16,136x30,0,32,18],135x62,137,0,17}
+      panes:
+        - start:
+          - cd zaynar_cms
+        - server:
+          - cd zaynar_cms
+        - console:
+          - cd zaynar_cms
+  - bundle-config:
+      panes:
+        - vim:
+          - cd ~/.bundle
+          - vim config
