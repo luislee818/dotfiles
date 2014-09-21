@@ -18,6 +18,8 @@
 	co = checkout
 	br = branch
 	ci = commit
+	s = status -s
+	lg = log --oneline --decorate --graph --all
 [init]
 	templatedir = ~/.git_template
 [push]
