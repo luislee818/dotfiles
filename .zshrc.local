@@ -332,9 +332,8 @@ fi
 
 ## END OF FILE #################################################################
 
-export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/bin:PATH=/usr/local/sbin:/usr/local/smlnj/bin/:$PATH
 export NODE_PATH=/usr/local/lib/node_modules:$NODE_PATH
-export PATH=/usr/local/sbin:$PATH
 
 source ~/workspace/others/dotfiles/tmuxinator/completion/tmuxinator.zsh
 
