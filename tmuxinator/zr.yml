@@ -55,7 +55,7 @@ windows:
       panes:
         - vim:
           - cd agp-json
-  - zeus-zaynar:
+  - zaynar-server:
       layout: 9132,272x62,0,0{136x62,0,0[136x31,0,0,16,136x30,0,32,18],135x62,137,0,17}
       panes:
         - start:
@@ -64,7 +64,7 @@ windows:
           - cd zaynar
         - console:
           - cd zaynar
-  - zeus-zaynar-cms:
+  - zaynar-cms-server:
       layout: 9132,272x62,0,0{136x62,0,0[136x31,0,0,16,136x30,0,32,18],135x62,137,0,17}
       panes:
         - start:
@@ -76,5 +76,5 @@ windows:
   - bundle-config:
       panes:
         - vim:
-          - cd ~/.bundle
+          - cd zaynar/.bundle
           - vim config
