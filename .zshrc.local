@@ -332,7 +332,6 @@ fi
 
 ## END OF FILE #################################################################
 
-export PATH=/usr/local/bin:/usr/local/sbin:~/Applications/vert.x-2.1M3/bin:$PATH
 export NODE_PATH=/usr/local/lib/node_modules:$NODE_PATH
 
 source ~/workspace/others/dotfiles/tmuxinator/completion/tmuxinator.zsh
