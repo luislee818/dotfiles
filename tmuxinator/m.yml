@@ -1,0 +1,60 @@
+# ~/.tmuxinator/m.yml
+
+name: mobile
+root: /projects/
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+tmux_options: -2
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+windows:
+  - cms:
+      layout: c376,272x62,0,0{205x62,0,0,0,66x62,206,0,2}
+      panes:
+        - vim:
+          - cd mobile_cms
+          - vim
+        - spec:
+          - cd mobile_cms
+  - web:
+      layout: c376,272x62,0,0{205x62,0,0,0,66x62,206,0,2}
+      panes:
+        - vim:
+          - cd mobile
+          - vim
+        - spec:
+          - cd mobile
+  - server:
+      layout: 9132,272x62,0,0{136x62,0,0[136x31,0,0,16,136x30,0,32,18],135x62,137,0,17}
+      panes:
+        - start:
+          - cd mobile
+        - server:
+          - cd mobile
+        - console:
+          - cd mobile
+  - cms-server:
+      layout: 9132,272x62,0,0{136x62,0,0[136x31,0,0,16,136x30,0,32,18],135x62,137,0,17}
+      panes:
+        - start:
+          - cd mobile_cms
+        - server:
+          - cd mobile_cms
+        - console:
+          - cd mobile_cms
+  - bundle-config:
+      panes:
+        - vim:
+          - cd mobile/.bundle
+          - vim config
