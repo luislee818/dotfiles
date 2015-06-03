@@ -346,4 +346,13 @@ alias sspec="bin/rspec"
 alias srake="bin/rake"
 alias bu="bundle"
 
+alias ga="git add"
+alias gs="git s"
+alias gst="git status"
+alias gco="git checkout"
+alias gd="git diff"
+alias gci="git commit"
+alias gl="git log"
+alias glg="git lg"
+
 eval "$(rbenv init -)"
