@@ -1,26 +1,27 @@
 [user]
-	name = Dapeng Li
-	email = luislee818@gmail.com
+  name = Dapeng Li
+  email = luislee818@gmail.com
 [core]
-	excludesfile = /Users/Dapeng/.gitignore_global
-	editor=/usr/bin/vim
+  excludesfile = /Users/Dapeng/.gitignore_global
+  editor=/usr/bin/vim
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
 [color]
-	ui = true
+  ui = true
 [alias]
-	lga = log --oneline --graph --all --decorate
-	st = status
-	co = checkout
-	br = branch
-	ci = commit
-	s = status -s
-	lg = log --oneline --decorate --graph --all
+  lga = log --oneline --graph --all --decorate
+  st = status
+  co = checkout
+  br = branch
+  ci = commit
+  s = status -s
+  lg = log --oneline --decorate --graph --all
+  l = "!. ~/.githelpers && pretty_git_log"
 [init]
-	templatedir = ~/.git_template
+  templatedir = ~/.git_template
 [push]
-	default = simple
+  default = simple
