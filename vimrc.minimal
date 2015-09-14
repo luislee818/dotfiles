@@ -1,0 +1,68 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" BASIC EDITING CONFIGURATION
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set hlsearch  " turn on highlight for search
+set incsearch  " turn on incrementing search
+set ignorecase smartcase  " make searches case-sensitive only if they contain upper-case characters
+let mapleader=","
+
+" key binding for toggle paste
+set pastetoggle=<leader>p
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" MISC KEY MAPS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Make saving and closing file easier
+nnoremap <leader>w :w<cr>
+nnoremap <leader>q :q<cr>
+nnoremap <leader>qq :qa<cr>
+
+" Make copying to system clipboard easier
+map <leader>y "+y
+
+" Show invisible characters - use vim-umipaired instead
+" nmap <leader>l :set list!<CR>  " Shortcut to rapidly toggle `set list`
+
+" Insert a hash rocket with <c-l>
+imap <c-l> <space>=><space>
+" Insert a stabby lambda with <c-k>
+imap <c-k> <space>-><space>
+
+" Open Gst window in fugitive
+nnoremap <leader>f :Gst<cr>
+
+" Use k, j, 0 and $ linewise
+noremap  <buffer> <silent> k gk
+noremap  <buffer> <silent> j gj
+noremap  <buffer> <silent> 0 g0
+noremap  <buffer> <silent> $ g$
+
+" Move around splits with <c-hjkl>
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+
+" Clear the search buffer when hitting ctrl-n
+function! MapC_N()
+  nnoremap <c-n> :nohlsearch<cr>
+endfunction
+call MapC_N()
+" nnoremap <leader>a <c-^>
+
+" map ctrl+p/n to Up/Down (filters commands in history)
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+
+" map leader-U to upcase the current word
+nmap <leader>U gUiw
+
+" map space to toggle fold
+nnoremap <Space> za
+
+" map shortcuts to change foldmethod
+map <leader>fi :setlocal foldmethod=indent<cr>
+map <leader>fs :setlocal foldmethod=syntax<cr>
+
+" toggle NERDTree pane
+map ,d :NERDTreeToggle<cr>
