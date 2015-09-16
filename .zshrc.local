@@ -354,5 +354,6 @@ alias gd="git diff"
 alias gci="git commit"
 alias gl="git log"
 alias glg="git lg"
+alias gp="git pull"
 
 eval "$(rbenv init -)"
