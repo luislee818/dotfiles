@@ -19,62 +19,41 @@ root: ~/workspace
 # tmux_command: byobu
 
 windows:
-  - zaynar_cms:
-      layout: c376,272x62,0,0{205x62,0,0,0,66x62,206,0,2}
+  - cms:
       panes:
         - vim:
           - cd zaynar_cms
           - vim
-        - spec:
-          - cd zaynar_cms
-      shell: cd zaynar_cms
-  - zaynar:
+  - z:
       layout: c376,272x62,0,0{205x62,0,0,0,66x62,206,0,2}
       panes:
         - vim:
           - cd zaynar
           - vim
-        - spec:
-          - cd zaynar
-  - asian_sports_book:
-      layout: c376,272x62,0,0{205x62,0,0,0,66x62,206,0,2}
+  - cms-s:
+      layout: 6f34,238x60,0,0{119x60,0,0,0,118x60,120,0,1}
       panes:
-        - vim:
-          - cd asian_sports_book
-          - vim
-        - karma:
-          - cd asian_sports_book
-          - rake
-  - omds:
-      layout: c376,272x62,0,0{205x62,0,0,0,66x62,206,0,2}
-      panes:
-        - vim:
-          - cd omds
-  - agp-json:
-      layout: c376,272x62,0,0{205x62,0,0,0,66x62,206,0,2}
-      panes:
-        - vim:
-          - cd agp-json
-  - zaynar-server:
-      layout: 9132,272x62,0,0{136x62,0,0[136x31,0,0,16,136x30,0,32,18],135x62,137,0,17}
-      panes:
-        - start:
-          - cd zaynar
-        - server:
-          - cd zaynar
-        - console:
-          - cd zaynar
-  - zaynar-cms-server:
-      layout: 9132,272x62,0,0{136x62,0,0[136x31,0,0,16,136x30,0,32,18],135x62,137,0,17}
-      panes:
-        - start:
-          - cd zaynar_cms
         - server:
           - cd zaynar_cms
         - console:
           - cd zaynar_cms
-  - bundle-config:
+  - z-s:
+      layout: 6f34,238x60,0,0{119x60,0,0,0,118x60,120,0,1}
+      panes:
+        - server:
+          - cd zaynar
+        - console:
+          - cd zaynar
+  - m:
+      layout: c376,272x62,0,0{205x62,0,0,0,66x62,206,0,2}
       panes:
         - vim:
-          - cd zaynar/.bundle
-          - vim config
+          - cd mobile
+          - vim
+  - m-s:
+      layout: 6f34,238x60,0,0{119x60,0,0,0,118x60,120,0,1}
+      panes:
+        - server:
+          - cd mobile
+        - console:
+          - cd mobile
