@@ -334,17 +334,17 @@ fi
 
 export NODE_PATH=/usr/local/lib/node_modules:$NODE_PATH
 
-source ~/workspace/others/dotfiles/tmuxinator/completion/tmuxinator.zsh
+# source ~/workspace/others/dotfiles/tmuxinator/completion/tmuxinator.zsh
 
-alias ctags="`brew --prefix`/bin/ctags"
+# alias ctags="`brew --prefix`/bin/ctags"
 alias v="vim +NERDTree"
-alias startpg="pg_ctl -D /usr/local/pgsql/data start"
-alias rs="rails server"
-alias rs1="rails server -p 3001"
-alias srs="bin/rails server"
-alias sspec="bin/rspec"
-alias srake="bin/rake"
-alias bu="bundle"
+# alias startpg="pg_ctl -D /usr/local/pgsql/data start"
+# alias rs="rails server"
+# alias rs1="rails server -p 3001"
+# alias srs="bin/rails server"
+# alias sspec="bin/rspec"
+# alias srake="bin/rake"
+# alias bu="bundle"
 
 alias ga="git add"
 alias gs="git s"
@@ -356,4 +356,13 @@ alias gl="git log"
 alias glg="git lg"
 alias gp="git pull"
 
+alias devnr="grunt dev-nr"
+alias gkb="grunt karma:babel"
+
 eval "$(rbenv init -)"
+export PATH="$HOME/.rbenv/bin:$PATH"
+
+## functions
+gg() {
+  git branch | grep $1 | xargs git checkout
+}
