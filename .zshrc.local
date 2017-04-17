@@ -359,8 +359,14 @@ alias gp="git pull"
 alias devnr="grunt dev-nr"
 alias gkb="grunt karma:babel"
 
-eval "$(rbenv init -)"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+# go
+export GOROOT=/usr/local/opt/go/libexec
+export GOPATH=$HOME/.go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 ## functions
 gg() {
