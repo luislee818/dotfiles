@@ -325,7 +325,7 @@ fi
 #getanames ()  { perl -ne 'while ( m/a name="([^"]*)"/gc ) { print $1, "\n"; }' $* }
 #getforms ()   { perl -ne 'while ( m:(\</?(input|form|select|option).*?\>):gic ) { print $1, "\n"; }' $* }
 #getstrings () { perl -ne 'while ( m/"(.*?)"/gc ) { print $1, "\n"; }' $*}
-#getanchors () { perl -ne 'while ( m/«([^«»\n]+)»/gc ) { print $1, "\n"; }' $* }
+#getanchors () { perl -ne 'while ( m/?([^??\n]+)?/gc ) { print $1, "\n"; }' $* }
 #showINC ()    { perl -e 'for (@INC) { printf "%d %s\n", $i++, $_ }' }
 #vimpm ()      { vim `perldoc -l $1 | sed -e 's/pod$/pm/'` }
 #vimhelp ()    { vim -c "help $1" -c on -c "au! VimEnter *" }
@@ -361,6 +361,7 @@ alias gr="git add . && git commit --amend --no-edit"
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
 eval "$(rbenv init -)"
 
 # go
@@ -371,7 +372,7 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 # python
 export PATH=~/Library/Python/2.7/bin:~/Library/Python/3.6/bin:$PATH
 
-export JAVA_HOME="$(/usr/libexec/java_home -v 9)"
+#export JAVA_HOME="$(/usr/libexec/java_home -v 9)"
 
 ## functions
 gg() {
@@ -382,12 +383,12 @@ gg() {
 export VISUAL=nvim
 
 #Use Neovim instead of Vim or Vi
-alias vim=nvim
-alias vi=nvim
-alias v="nvim +NERDTree"
+#alias vim=nvim
+#alias vi=nvim
+alias v="vim +NERDTree"
 
-export VIMCONFIG=~/.config/nvim
-export VIMDATA=~/.local/share/nvim
+#export VIMCONFIG=~/.config/nvim
+#export VIMDATA=~/.local/share/nvim
 
 export PATH=$PATH:$VIMCONFIG/pack/bundle/start/fzf/bin
 export FZF_DEFAULT_COMMAND='rg --files'
@@ -403,13 +404,14 @@ if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
 	fi
 fi
 
-export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
-export JAVA_9_HOME=$(/usr/libexec/java_home -v9)
-export JAVA_11_HOME=$(/usr/libexec/java_home -v11)
+#export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
+#export JAVA_9_HOME=$(/usr/libexec/java_home -v9)
+#export JAVA_11_HOME=$(/usr/libexec/java_home -v11)
 
-alias java8='export JAVA_HOME=$JAVA_8_HOME'
-alias java9='export JAVA_HOME=$JAVA_9_HOME'
-alias java11='export JAVA_HOME=$JAVA_11_HOME'
+#alias java8='export JAVA_HOME=$JAVA_8_HOME'
+#alias java9='export JAVA_HOME=$JAVA_9_HOME'
+#alias java11='export JAVA_HOME=$JAVA_11_HOME'
 
 # default to Java 11
-java11
+#java11
+eval "$(/opt/homebrew/bin/brew shellenv)"
